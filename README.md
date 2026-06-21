@@ -17,6 +17,23 @@ The graphic below shows the basic flow:
 
 ![Highlight Hook timing diagram](assets/timing-diagram.png)
 
+## Batching Nearby Highlights
+
+Highlight Hook can be used to reduce clip spam when several NVIDIA highlights happen close together.
+
+The basic idea is:
+
+1. Read NVIDIA's last highlight ID on startup.
+2. Watch for new highlight entries in `UGCTracker.json`.
+3. When several new highlights arrive close together, treat them as one burst instead of separate saves.
+4. Wait until the burst settles, then save one OBS replay buffer clip for the whole group.
+
+That means one OBS clip can cover multiple NVIDIA highlight entries if they happen inside the same time window.
+
+This is useful when a fight or streak creates several automatic highlight entries in a row. Instead of saving a bunch of overlapping clips, the app can group them and keep the recording list cleaner.
+
+The replay buffer length setting helps with this because it tells the app how much video OBS keeps in memory when deciding whether nearby highlights can be grouped into one useful save.
+
 ## Screenshot
 
 Current app screenshot:
