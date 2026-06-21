@@ -17,6 +17,12 @@ The graphic below shows the basic flow:
 
 ![Highlight Hook timing diagram](assets/timing-diagram.png)
 
+## Screenshot
+
+Current app screenshot:
+
+![Highlight Hook app screenshot](assets/app-screenshot.png)
+
 ## Settings
 
 - `Highlight tracker path`: the NVIDIA `UGCTracker.json` file
