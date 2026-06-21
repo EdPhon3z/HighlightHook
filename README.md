@@ -2,7 +2,7 @@
 
 Highlight Hook watches NVIDIA's local `UGCTracker.json` file and tells OBS Studio to save the replay buffer after a user-selected delay.
 
-The goal is simple: keep the automatic NVIDIA highlight trigger, but save a longer OBS clip that includes the reaction after the event.
+It keeps the automatic NVIDIA highlight trigger, but saves a longer OBS clip that includes the reaction after the moment.
 
 ## How It Works
 
