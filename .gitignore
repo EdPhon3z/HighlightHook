@@ -1,0 +1,4 @@
+HighlightHook/bin/
+HighlightHook/obj/
+HighlightHook/*.user
+.vs/
